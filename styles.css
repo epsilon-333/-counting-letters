@@ -17,7 +17,7 @@ body{
 }
 .header{padding:16px 16px 8px}
 .header h1{margin:0;font-size:1.1rem}
-.title-strong{font-size:1.4rem;font-weight:800;letter-spacing:-0.5px}
+.title-strong{font-size:3.3rem;font-weight:800;letter-spacing:-0.5px;line-height:1}
 .ad{width:120px;background:linear-gradient(180deg,#fafafa,#f2f2f6);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.9rem}
 .ad{font-weight:700;color:#4b4b59}
 .subtitle{margin:6px 0 0;color:var(--muted);font-size:0.9rem}
@@ -58,6 +58,7 @@ textarea#inputText{
   .count-grid{grid-template-columns:repeat(1,1fr)}
   .controls{justify-content:space-between}
   .ad{display:none}
+  .title-strong{font-size:2rem}
 }
 
 @media (orientation:landscape) and (max-height:420px){
