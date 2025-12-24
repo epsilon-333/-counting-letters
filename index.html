@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>글자수 세기</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1 id="mainTitle">글자수 세기</h1>
+    <p class="subtitle">공백 포함 · 공백 제외 · 바이트 수를 실시간으로 보여줍니다</p>
+  </header>
+
+  <div class="container">
+    <aside class="ad ad-left" aria-hidden="true"></aside>
+
+    <main class="main">
+      <div class="content">
+        <textarea id="inputText" placeholder="여기에 붙여넣기 또는 입력하세요" autocapitalize="off" autocorrect="off"></textarea>
+      </div>
+
+      <footer class="footer">
+        <div class="count-grid">
+          <div class="card">
+            <div class="label">공백 포함</div>
+            <div id="countIncluding" class="value">0</div>
+          </div>
+          <div class="card">
+            <div class="label">공백 제외</div>
+            <div id="countExcluding" class="value">0</div>
+          </div>
+          <div class="card">
+            <div class="label">바이트</div>
+            <div id="countBytes" class="value">0</div>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="copyBtn" class="btn primary">복사</button>
+          <button id="clearBtn" class="btn">지우기</button>
+        </div>
+      </footer>
+    </main>
+
+    <aside class="ad ad-right" aria-hidden="true"></aside>
+  </div>
+</body>
+</html>

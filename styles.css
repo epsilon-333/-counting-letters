@@ -1,0 +1,70 @@
+:root{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --muted:#6b6b75;
+  --accent:#1a73e8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans KR',sans-serif;
+  background:var(--bg);
+  color:#111;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+.header{padding:16px 16px 8px}
+.header h1{margin:0;font-size:1.1rem}
+.title-strong{font-size:1.4rem;font-weight:800;letter-spacing:-0.5px}
+.ad{width:120px;background:linear-gradient(180deg,#fafafa,#f2f2f6);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.9rem}
+.ad{font-weight:700;color:#4b4b59}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:0.9rem}
+.main{flex:1;display:flex;padding:12px}
+.container{display:flex;align-items:stretch;gap:12px;padding:0 12px}
+.ad{width:120px;background:linear-gradient(180deg,#fafafa,#f2f2f6);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.9rem}
+.ad-left{order:0}
+.ad-right{order:2}
+.main{flex:1;display:flex;flex-direction:column;padding:12px 0}
+.content{max-width:100%;display:flex;flex-direction:column;height:100%}
+textarea#inputText{
+  width:100%;
+  flex:1 1 auto;
+  resize:vertical;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,0.06);
+  padding:14px;
+  font-size:1rem;
+  line-height:1.5;
+  background:linear-gradient(180deg, #fff, #fbfbff);
+  box-shadow:0 1px 2px rgba(16,24,40,0.03) inset;
+  min-height:360px;
+  max-height:calc(100vh - 220px);
+  overflow:auto;
+}
+.footer{padding:10px 12px 20px;background:transparent}
+.count-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.card{background:var(--card);padding:10px;border-radius:10px;box-shadow:0 6px 18px rgba(18,38,63,0.04)}
+.label{font-size:0.85rem;color:var(--muted)}
+.value{font-weight:600;margin-top:6px;font-size:1.05rem}
+.controls{margin-top:10px;display:flex;justify-content:flex-end;gap:8px}
+.btn{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:8px 12px;border-radius:8px;font-size:0.95rem}
+.btn.primary{background:var(--accent);color:#fff;border-color:transparent}
+
+@media (max-width:600px){
+  .header h1{font-size:1rem}
+  .subtitle{font-size:0.85rem}
+  .count-grid{grid-template-columns:repeat(1,1fr)}
+  .controls{justify-content:space-between}
+  .ad{display:none}
+}
+
+@media (orientation:landscape) and (max-height:420px){
+  .main{padding:8px}
+  textarea#inputText{min-height:140px}
+  .count-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+}
+
+/* safe area padding for mobile */
+body{padding-bottom:env(safe-area-inset-bottom)}
